@@ -12,6 +12,11 @@ class ConversionViewController: UIViewController {
     
     // MARK: Variables
     
+    // MARK: Outlets
+    
+    @IBOutlet weak var celsiusLabel: UILabel!
+    @IBOutlet weak var fahrenheitTextField: UITextField!
+    
     // MARK: Properties
     
     var celsiusValue: Measurement<UnitTemperature>?{
@@ -35,17 +40,13 @@ class ConversionViewController: UIViewController {
         return nf
     }()
 
-
-    // MARK: Outlets
-    
-    @IBOutlet weak var celsiusLabel: UILabel!
-    @IBOutlet weak var fahrenheitTextField: UITextField!
-    
     // MARK Events
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        updateCelsiusLabel()
         
     }
 
@@ -68,10 +69,10 @@ class ConversionViewController: UIViewController {
 
     @IBAction func fahrenheitTextFieldChanged(_ sender: UITextField) {
         
-        if let text = sender.text, !text.isEmpty{
-            celsiusLabel.text = text
-        }else{
-            celsiusLabel.text = "?"
+        if let text = fahrenheitTextField.text, let value = Double(text) {
+            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+        } else {
+            fahrenheitValue = nil
         }
     }
     

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Convert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                             <outletCollection property="gestureRecognizers" destination="MpH-G7-WTW" appends="YES" id="ReM-Ax-hbz"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="PhE-mf-Urw"/>
+                    <tabBarItem key="tabBarItem" title="Convert" image="ConvertIcon" id="PhE-mf-Urw"/>
                     <connections>
                         <outlet property="celsiusLabel" destination="Vse-9p-BdL" id="XlI-Aq-i6d"/>
                         <outlet property="fahrenheitTextField" destination="5k4-eN-9MP" id="3dI-9r-RUV"/>
@@ -104,7 +104,7 @@
             </objects>
             <point key="canvasLocation" x="-266" y="869"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="SwH-l3-ITj">
             <objects>
                 <viewController id="J14-p8-C3z" sceneMemberID="viewController">
@@ -112,7 +112,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </mapView>
-                    <tabBarItem key="tabBarItem" title="Item" id="bDJ-bV-GdY"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="bDJ-bV-GdY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wy6-jZ-Jf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,8 +128,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="J14-p8-C3z" kind="relationship" relationship="viewControllers" id="m53-Wd-nWC"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="JsF-kc-Kcx"/>
+                        <segue destination="J14-p8-C3z" kind="relationship" relationship="viewControllers" id="m53-Wd-nWC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uou-ox-MhT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -137,4 +137,8 @@
             <point key="canvasLocation" x="28" y="82"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ConvertIcon" width="48" height="32"/>
+        <image name="MapIcon" width="48" height="32"/>
+    </resources>
 </document>

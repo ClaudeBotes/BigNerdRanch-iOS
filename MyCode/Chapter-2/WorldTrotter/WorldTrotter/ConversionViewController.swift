@@ -47,7 +47,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         updateCelsiusLabel()
-        
+        print("function loaded")
     }
 
     override func didReceiveMemoryWarning() {

@@ -40,19 +40,32 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         return nf
     }()
 
-    // MARK Events
+    // MARK: Events
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         updateCelsiusLabel()
-        print("function loaded")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        let nightBackgroundColor = hexStringToUIColor(hex: "#6C7F8C")
+        let dayBackgroundColor = hexStringToUIColor(hex: "#FF2D55")
+        
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour > 20 {
+            self.view.backgroundColor = nightBackgroundColor
+        } else {
+            self.view.backgroundColor = dayBackgroundColor
+        }
     }
     
     // MARK: Functions
@@ -63,6 +76,28 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         } else {
             celsiusLabel.text = "???"
         }
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
     // MARK: Delegate methods

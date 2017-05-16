@@ -53,6 +53,7 @@
 		51CD1A7A1EC20725002BE44A /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51CD1A7E1EC20725002BE44A /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		51CD1A801EC20725002BE44A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51F710331EC7A02A00FB8CD3 /* WorldTrotterPlay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WorldTrotterPlay.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 				5189B61C1EC4AF1300F47F9A /* MapViewController.swift */,
 				51CD1A5F1EC20725002BE44A /* Main.storyboard */,
 				51CD1A8C1EC20876002BE44A /* Supporting Files */,
+				51F710331EC7A02A00FB8CD3 /* WorldTrotterPlay.playground */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";

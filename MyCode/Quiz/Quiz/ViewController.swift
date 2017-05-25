@@ -90,7 +90,7 @@ class ViewController: UIViewController {
         
         UIView.animate(withDuration: 0.5,
                        delay: 0,
-                       options: [],
+                       options: [.repeat],
                        animations: {
                             self.currentQuestionLabel.alpha = 0
                             self.nextQuestionLabel.alpha = 1

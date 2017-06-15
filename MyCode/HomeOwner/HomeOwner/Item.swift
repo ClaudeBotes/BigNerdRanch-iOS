@@ -9,6 +9,7 @@
 import UIKit
 
 class Item: NSObject {
+    
     var name: String
     var valueInDollers: Int
     var serialNumber: String?

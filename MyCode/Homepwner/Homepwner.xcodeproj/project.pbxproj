@@ -78,6 +78,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		511635791EF59C7D009792C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B64C0F21B84C7C300288BE3 /* AppDelegate.swift */,
+				6B64C0F91B84C7C300288BE3 /* Assets.xcassets */,
+				6B64C0FB1B84C7C300288BE3 /* LaunchScreen.storyboard */,
+				6B64C0FE1B84C7C300288BE3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		6B64C0E61B84C7C300288BE3 = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +112,8 @@
 		6B64C0F11B84C7C300288BE3 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
-				6B64C0F21B84C7C300288BE3 /* AppDelegate.swift */,
+				511635791EF59C7D009792C0 /* Supporting Files */,
 				6B64C0F61B84C7C300288BE3 /* Main.storyboard */,
-				6B64C0F91B84C7C300288BE3 /* Assets.xcassets */,
-				6B64C0FB1B84C7C300288BE3 /* LaunchScreen.storyboard */,
-				6B64C0FE1B84C7C300288BE3 /* Info.plist */,
 				6B64C1201B84C8EB00288BE3 /* ItemsViewController.swift */,
 				6B64C1221B84C9C900288BE3 /* Item.swift */,
 				6B64C1241B84CB3F00288BE3 /* ItemStore.swift */,

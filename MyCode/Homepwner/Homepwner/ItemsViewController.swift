@@ -22,7 +22,12 @@ class ItemsViewController: UITableViewController {
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         
-        tableView.rowHeight = 65
+        //tableView.rowHeight = 65
+        // We want the cell to have dynamic height
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        // Setting the estimagedRowHeight on the table view improves performance, defer performace cost untill the user scrolls
+        tableView.estimatedRowHeight = 65
     }
     
     // MARK: Table View Events

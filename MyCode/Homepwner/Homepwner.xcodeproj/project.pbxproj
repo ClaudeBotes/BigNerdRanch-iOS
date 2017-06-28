@@ -119,10 +119,10 @@
 				511635791EF59C7D009792C0 /* Supporting Files */,
 				6B64C0F61B84C7C300288BE3 /* Main.storyboard */,
 				6B64C1201B84C8EB00288BE3 /* ItemsViewController.swift */,
+				5116357A1EFFE9BD009792C0 /* DetailViewController.swift */,
 				51BBD2E21EFC1D42007BC930 /* ItemCell.swift */,
 				6B64C1221B84C9C900288BE3 /* Item.swift */,
 				6B64C1241B84CB3F00288BE3 /* ItemStore.swift */,
-				5116357A1EFFE9BD009792C0 /* DetailViewController.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";

@@ -15,12 +15,20 @@ class ItemsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
+         
+         YOU DONT NEED THIS CODE.
+         THIS IS ONLY NEEDED WHEN YOU DON'T HAVE A UINavigationController
+         
         // Get the height of the status bar
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
+         
+         
+         */
         
         //tableView.rowHeight = 65
         // We want the cell to have dynamic height
@@ -28,6 +36,12 @@ class ItemsViewController: UITableViewController {
         
         // Setting the estimagedRowHeight on the table view improves performance, defer performace cost untill the user scrolls
         tableView.estimatedRowHeight = 65
+    }
+    
+    // Exposes the view controllers left bar button item
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        navigationItem.leftBarButtonItem = editButtonItem
     }
     
     // MARK: Table View Events
@@ -106,7 +120,7 @@ class ItemsViewController: UITableViewController {
     
     // MARK: Actions
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         // Create a new item and add it to the store
         let newItem = itemStore.createItem()
         
@@ -116,22 +130,6 @@ class ItemsViewController: UITableViewController {
             
             // Insert this new row into the table
             tableView.insertRows(at: [indexPath], with: .automatic)
-        }
-    }
-    
-    @IBAction func toggleEditMode(_ sender: UIButton) {
-        // If ou are currently in editting mode..
-        if isEditing {
-            //  Change text of button to inorm user of state
-            sender.setTitle("Edit", for: .normal)
-            // Turn off editing mode
-            setEditing(false, animated: true)
-            
-        }else{
-            // Change text of button to inform user of state
-            sender.setTitle("Done", for: .normal)
-            // Turn on edting mode
-            setEditing(true, animated: true)
         }
     }
     

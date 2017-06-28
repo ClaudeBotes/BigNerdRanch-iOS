@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController{
+class DetailViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Outlets
     
@@ -33,6 +33,13 @@ class DetailViewController: UIViewController{
         formatter.timeStyle = .none
         return formatter
     }()
+    
+    // MARK: UITextFieldDelegate methods
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     
     // MARK: Events
